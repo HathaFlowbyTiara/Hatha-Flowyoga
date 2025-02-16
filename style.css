@@ -46,13 +46,12 @@ section {
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
-footer {
-    background: #50b3a2;
-    color: white;
-    padding: 10px 0;
+/* Knoppen netjes naast elkaar */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Ruimte tussen knoppen */
     margin-top: 20px;
-    opacity: 0;
-    animation: fadeIn 2s ease-in-out forwards;
 }
 
 button, .btn {
@@ -73,6 +72,15 @@ button:hover, .btn:hover {
     background: #4d6c4d;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
     transform: translateY(-2px);
+}
+
+footer {
+    background: #50b3a2;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -101,4 +109,10 @@ button:hover, .btn:hover {
         margin: 10px;
         padding: 15px;
     }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
+
