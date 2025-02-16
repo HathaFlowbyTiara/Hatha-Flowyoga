@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hatha en Flow met Tiara</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
     <header>
-        <h1>Welkom bij Hatha en Flow met Tiara</h1>
+        <h1 class="fade-in">Welkom bij Hatha en Flow met Tiara</h1>
         <nav>
             <ul>
                 <li><a href="over.html">Over mij</a></li>
@@ -22,16 +23,20 @@
     </header>
 
     <section id="intro">
-        <h2>Vind balans en ontspanning</h2>
-        <p>Ontdek de rust van Hatha en Flow Yoga. Meld je aan voor een proefles!</p>
-        <a href="lessen.html" class="btn">Bekijk mijn lessen</a>
-        <a href="ervaringen.html" class="btn">Lees ervaringen</a>
+        <h2 class="fade-in">Vind balans en ontspanning</h2>
+        <p class="fade-in">Ontdek de rust van Hatha en Flow Yoga. Meld je aan voor een proefles!</p>
+        <a href="lessen.html" class="btn slide-in">Bekijk mijn lessen</a>
+        <a href="ervaringen.html" class="btn slide-in">Lees ervaringen</a>
     </section>
 
     <footer>
         <p>&copy; 2025 Yoga met Tiara</p>
     </footer>
 
+    <script>
+        gsap.from(".fade-in", { opacity: 0, y: 20, duration: 1.5, stagger: 0.3 });
+        gsap.from(".slide-in", { opacity: 0, x: -50, duration: 1.5, stagger: 0.3 });
+    </script>
 </body>
 </html>
 
