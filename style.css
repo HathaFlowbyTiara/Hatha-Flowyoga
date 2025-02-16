@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #d8e3d5;
     text-align: center;
 }
 
@@ -46,7 +46,7 @@ footer {
 
 button, .btn {
     display: inline-block;
-    background: #50b3a2;
+    background: #5a7d5a;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -59,7 +59,7 @@ button, .btn {
 }
 
 button:hover, .btn:hover {
-    background: #3a8c7d;
+    background: #4d6c4d;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
