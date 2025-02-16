@@ -1,15 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #d8e3d5;
     text-align: center;
+    transition: background 1s ease-in-out;
 }
 
 header {
     background: url('header-afbeelding.jpg') center/cover no-repeat;
     color: white;
     padding: 50px 0;
+    animation: fadeIn 2s ease-in-out;
 }
 
 nav ul {
@@ -20,6 +22,11 @@ nav ul {
 nav ul li {
     display: inline;
     margin: 0 15px;
+    transition: transform 0.3s;
+}
+
+nav ul li:hover {
+    transform: scale(1.1);
 }
 
 nav ul li a {
@@ -35,6 +42,8 @@ section {
     background: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 footer {
@@ -42,6 +51,8 @@ footer {
     color: white;
     padding: 10px 0;
     margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 button, .btn {
@@ -54,13 +65,25 @@ button, .btn {
     font-weight: bold;
     border: none;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 button:hover, .btn:hover {
     background: #4d6c4d;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
