@@ -1,19 +1,15 @@
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #d8e2dc; /* Licht salie groen */
+    background-color: #d8e3d5;
     text-align: center;
 }
-header {
-    background: url('afbeelding-header.jpg') center/cover no-repeat;
-    height: 300px; /* Zorg dat de header een hoogte heeft */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
 
+header {
+    background: url('header-afbeelding.jpg') center/cover no-repeat;
+    color: white;
+    padding: 50px 0;
 }
 
 nav ul {
@@ -33,29 +29,12 @@ nav ul li a {
 }
 
 section {
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
     background: white;
-    margin: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Stijlen voor knoppen */
-button, .btn {
-    display: inline-block;
-    background: #6b9080; /* Donker salie groen */
-    color: white;
-    padding: 12px 24px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover, .btn:hover {
-    background: #4f7166;
 }
 
 footer {
@@ -63,6 +42,25 @@ footer {
     color: white;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+button, .btn {
+    display: inline-block;
+    background: #5a7d5a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover, .btn:hover {
+    background: #4d6c4d;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
