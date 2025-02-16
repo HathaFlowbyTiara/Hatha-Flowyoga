@@ -5,11 +5,15 @@ body {
     background-color: #d8e2dc; /* Licht salie groen */
     text-align: center;
 }
-
 header {
-    background: #50b3a2;
+    background: url('afbeelding-header.jpg') center/cover no-repeat;
+    height: 300px; /* Zorg dat de header een hoogte heeft */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 20px 0;
+    text-align: center;
+
 }
 
 nav ul {
