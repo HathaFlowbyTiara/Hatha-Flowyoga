@@ -50,6 +50,52 @@
     <h2>Reviews</h2>
     <div id="review-lijst"></div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        laadReviews();
+    });
+
+    function toevoegenReview() {
+        let naam = document.getElementById("naam").value;
+        let review = document.getElementById("review").value;
+
+        if (naam.trim() === "" || review.trim() === "") {
+            alert("Vul zowel je naam als je ervaring in.");
+            return;
+        }
+
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push({ naam, review });
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        document.getElementById("naam").value = "";
+        document.getElementById("review").value = "";
+
+        laadReviews();
+    }
+
+    function laadReviews() {
+        let reviewSectie = document.getElementById("review-lijst");
+        reviewSectie.innerHTML = "";
+
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+
+        reviews.forEach((item, index) => {
+            let nieuweReview = document.createElement("div");
+            nieuweReview.classList.add("ervaring");
+            nieuweReview.innerHTML = `<p><strong>${item.naam}:</strong> "${item.review}"</p> 
+                                      <button onclick="verwijderReview(${index})">❌ Verwijder</button>`;
+            reviewSectie.appendChild(nieuweReview);
+        });
+    }
+
+    function verwijderReview(index) {
+        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.splice(index, 1);
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+        laadReviews();
+    }
+</script>
 
     </section>
 
