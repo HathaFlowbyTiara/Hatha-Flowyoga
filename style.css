@@ -140,6 +140,20 @@ footer {
     margin-top: 5px;
     color: #4d6c4d;
 }
+/* Specifieke stijlen voor de foto's op de "Over mij" pagina */
+.over-mij-fotos {
+    display: flex;
+    justify-content: center; /* Zorgt ervoor dat de foto's gecentreerd worden */
+    gap: 15px; /* Ruimte tussen de foto's */
+    margin-top: 20px; /* Ruimte boven de foto's */
+}
+
+.over-mij-fotos img {
+    border-radius: 50%; /* Maakt de foto's rond */
+    object-fit: cover; /* Zorgt ervoor dat de foto's netjes in het vierkant passen */
+    width: 150px; /* Breedte van de foto's */
+    height: 150px; /* Hoogte van de foto's */
+}
 
 /* Mobiele weergave */
 @media (max-width: 768px) {
