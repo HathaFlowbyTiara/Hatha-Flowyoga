@@ -40,27 +40,47 @@
                 <img src="les3.jpg" alt="Hatha yoga - Prive les">
                 <p><strong>Eduard:</strong> "------"</p>
             </div>
-    <div id="review-lijst"></div>
-</section>
-<section>
-    <h2>Laat je ervaring achter</h2>
-    <form action="https://https://formspree.io/f/xwpvwwvl" method="POST">
-        <label for="naam">Naam:</label>
-        <input type="text" id="naam" name="naam" required>
+        </div>
+    </section>
 
-        <label for="review">Jouw ervaring:</label>
-        <textarea id="review" name="review" rows="4" required></textarea>
+    <section>
+        <h2>Laat je ervaring achter</h2>
+        <form id="reviewForm" action="https://formspree.io/f/xwpvwwvl" method="POST">
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam" required>
 
-        <button type="submit">Verstuur</button>
-    </form>
-</section>
+            <label for="review">Jouw ervaring:</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
 
+            <button type="submit">Verstuur</button>
+        </form>
+        <p id="bedanktBericht" style="display: none; color: green;">Bedankt voor je review! ✨</p>
     </section>
 
     <footer>
         <p>&copy; 2025 Yoga met Tiara</p>
     </footer>
 
+    <script>
+        document.getElementById("reviewForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Voorkom dat de pagina herlaadt
+            var form = this;
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    form.style.display = "none"; // Verberg het formulier
+                    document.getElementById("bedanktBericht").style.display = "block"; // Toon bedankbericht
+                } else {
+                    alert("Er ging iets mis, probeer het later opnieuw.");
+                }
+            }).catch(error => alert("Er ging iets mis, probeer het later opnieuw."));
+        });
+    </script>
+
 </body>
 </html>
+
 
