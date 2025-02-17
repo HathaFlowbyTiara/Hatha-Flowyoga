@@ -125,6 +125,19 @@ footer {
         transform: translateY(0);
     }
 }
+.quote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #4d6c4d;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quote .author {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 5px;
+}
 
 /* Mobiele weergave */
 @media (max-width: 768px) {
