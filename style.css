@@ -71,6 +71,13 @@ section {
     flex-grow: 1;
 }
 
+/* Toevoeging van de #intro sectie */
+#intro {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #d0f4e7; /* Salie groen kleur */
+}
+
 /* Knoppen container */
 .btn-container {
     display: flex;
@@ -125,6 +132,7 @@ footer {
         transform: translateY(0);
     }
 }
+
 .quote {
     font-style: italic;
     font-size: 1.2em;
@@ -140,6 +148,7 @@ footer {
     margin-top: 5px;
     color: #4d6c4d;
 }
+
 /* Specifieke stijlen voor de foto's op de "Over mij" pagina */
 .over-mij-fotos {
     display: flex;
@@ -172,6 +181,7 @@ footer {
         gap: 10px;
     }
 }
+
 /* Ervaringen container */
 .ervaringen-container {
     display: flex;
