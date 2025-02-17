@@ -33,11 +33,57 @@ Mijn lessen zijn een combinatie van vloeiende bewegingen, bewuste ademhaling en 
         </div>
     </section>
 
+    <!-- Yoga Animaties -->
+    <section id="yoga-animatie">
+        <h2>Yoga in Beweging</h2>
+        
+        <!-- Eerste Yoga Pose -->
+        <div class="yoga-pose">
+            <img src="yoga-svgrepo-com-4.svg" alt="Yoga Pose 1" class="yoga-svg" />
+        </div>
+
+        <!-- Tweede Yoga Pose -->
+        <div class="yoga-pose">
+            <img src="yoga-svgrepo-com-5.svg" alt="Yoga Pose 2" class="yoga-svg" />
+        </div>
+
+        <!-- Derde Yoga Pose -->
+        <div class="yoga-pose">
+            <img src="yoga-svgrepo-com-6.svg" alt="Yoga Pose 3" class="yoga-svg" />
+        </div>
+    </section>
+
     <footer>
         <p>&copy; 2025 Yoga met Tiara</p>
     </footer>
 
+    <style>
+        /* Yoga Animatie styling */
+        .yoga-svg {
+            width: 150px;
+            height: 150px;
+            animation: yogaMove 3s ease-in-out infinite;
+            margin: 20px;
+        }
+
+        /* De animatie voor de beweging */
+        @keyframes yogaMove {
+            0%, 100% {
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(5deg);
+            }
+        }
+
+        #yoga-animatie {
+            text-align: center;
+            margin: 50px 0;
+        }
+    </style>
+
 </body>
 </html>
+
 
 
