@@ -182,35 +182,56 @@ footer {
     }
 }
 
-/* Ervaringen container */
 .ervaringen-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 20px;
 }
 
-/* Ervaring item */
 .ervaring {
-    background: rgba(255, 255, 255, 0.85);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    width: 250px;
     text-align: center;
-    transition: transform 0.3s ease-in-out;
 }
 
-.ervaring:hover {
-    transform: translateY(-5px);
-}
-
-/* Afbeeldingen */
 .ervaring img {
-    width: 100%;
+    width: 100%; /* Zorgt ervoor dat de afbeelding binnen de container past */
+    max-width: 200px; /* Max grootte */
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-sectie {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#naam, #review {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #5a7d5a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #4d6c4d;
 }
 
 /* Actieve navigatie-link */
