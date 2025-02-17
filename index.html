@@ -31,24 +31,11 @@ Mijn lessen zijn een combinatie van vloeiende bewegingen, bewuste ademhaling en 
             <a href="lessen.html" class="btn">Bekijk mijn lessen</a>
             <a href="ervaringen.html" class="btn">Lees ervaringen</a>
         </div>
-    </section>
 
-    <!-- Yoga Animaties -->
-    <section id="yoga-animatie">
-        <h2>Yoga in Beweging</h2>
-        
-        <!-- Eerste Yoga Pose -->
-        <div class="yoga-pose">
+        <!-- Yoga afbeeldingen in de achtergrond -->
+        <div class="yoga-background">
             <img src="yoga-svgrepo-com-4.svg" alt="Yoga Pose 1" class="yoga-svg" />
-        </div>
-
-        <!-- Tweede Yoga Pose -->
-        <div class="yoga-pose">
             <img src="yoga-svgrepo-com-5.svg" alt="Yoga Pose 2" class="yoga-svg" />
-        </div>
-
-        <!-- Derde Yoga Pose -->
-        <div class="yoga-pose">
             <img src="yoga-svgrepo-com-6.svg" alt="Yoga Pose 3" class="yoga-svg" />
         </div>
     </section>
@@ -58,32 +45,96 @@ Mijn lessen zijn een combinatie van vloeiende bewegingen, bewuste ademhaling en 
     </footer>
 
     <style>
-        /* Yoga Animatie styling */
-        .yoga-svg {
-            width: 150px;
-            height: 150px;
-            animation: yogaMove 3s ease-in-out infinite;
-            margin: 20px;
+        /* Algemene styling voor de pagina */
+        body {
+            font-family: 'Alegreya', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
 
-        /* De animatie voor de beweging */
-        @keyframes yogaMove {
-            0%, 100% {
-                transform: scale(1) rotate(0deg);
-            }
-            50% {
-                transform: scale(1.1) rotate(5deg);
-            }
-        }
-
-        #yoga-animatie {
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
             text-align: center;
-            margin: 50px 0;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Introductie sectie */
+        #intro {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #e0f7fa;
+        }
+
+        #intro h2 {
+            margin-bottom: 20px;
+        }
+
+        #intro p {
+            margin-bottom: 40px;
+        }
+
+        /* Knoppen styling */
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #004d40;
+        }
+
+        /* Styling voor de yoga afbeeldingen op de achtergrond */
+        .yoga-background {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .yoga-svg {
+            width: 80px; /* Kleinere grootte voor de afbeeldingen */
+            height: 80px;
+            border-radius: 50%; /* Maakt de afbeeldingen rond */
+            opacity: 0.7; /* Zet de afbeeldingen wat transparant */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
         }
     </style>
 
 </body>
 </html>
+
 
 
 
