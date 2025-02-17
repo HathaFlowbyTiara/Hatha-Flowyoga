@@ -40,62 +40,20 @@
                 <img src="les3.jpg" alt="Hatha yoga - Prive les">
                 <p><strong>Eduard:</strong> "------"</p>
             </div>
-        </div>
-        <section class="review-sectie">
-    <h2>Jouw Ervaring</h2>
-    <input type="text" id="naam" placeholder="Jouw naam">
-    <textarea id="review" placeholder="Schrijf hier je ervaring..."></textarea>
-    <button onclick="toevoegenReview()">Plaats Review</button>
-    
-
     <div id="review-lijst"></div>
 </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        laadReviews();
-    });
+<section>
+    <h2>Laat je ervaring achter</h2>
+    <form action="https://https://formspree.io/f/xwpvwwvl" method="POST">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required>
 
-    function toevoegenReview() {
-        let naam = document.getElementById("naam").value;
-        let review = document.getElementById("review").value;
+        <label for="review">Jouw ervaring:</label>
+        <textarea id="review" name="review" rows="4" required></textarea>
 
-        if (naam.trim() === "" || review.trim() === "") {
-            alert("Vul zowel je naam als je ervaring in.");
-            return;
-        }
-
-        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-        reviews.push({ naam, review });
-        localStorage.setItem("reviews", JSON.stringify(reviews));
-
-        document.getElementById("naam").value = "";
-        document.getElementById("review").value = "";
-
-        laadReviews();
-    }
-
-    function laadReviews() {
-        let reviewSectie = document.getElementById("review-lijst");
-        reviewSectie.innerHTML = "";
-
-        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-        reviews.forEach((item, index) => {
-            let nieuweReview = document.createElement("div");
-            nieuweReview.classList.add("ervaring");
-            nieuweReview.innerHTML = `<p><strong>${item.naam}:</strong> "${item.review}"</p> 
-                                      <button onclick="verwijderReview(${index})">❌ Verwijder</button>`;
-            reviewSectie.appendChild(nieuweReview);
-        });
-    }
-
-    function verwijderReview(index) {
-        let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-        reviews.splice(index, 1);
-        localStorage.setItem("reviews", JSON.stringify(reviews));
-        laadReviews();
-    }
-</script>
+        <button type="submit">Verstuur</button>
+    </form>
+</section>
 
     </section>
 
