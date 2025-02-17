@@ -133,10 +133,12 @@ footer {
     margin-top: 20px;
 }
 
-.quote .author {
-    font-size: 1em;
+.quote span {
     font-weight: bold;
+    font-size: 1em;
+    display: block;
     margin-top: 5px;
+    color: #4d6c4d;
 }
 
 /* Mobiele weergave */
